@@ -1,4 +1,4 @@
-![Cuarteto de Anscombe](![image](https://github.com/user-attachments/assets/a7a5b539-9983-45be-baed-2129dcc61998)
+![Logo de la Universidad Politécnica Salesiana](![image](https://github.com/user-attachments/assets/8bd61035-50dc-4bf3-8da8-fea306dd3d5e)
 )
 
 
