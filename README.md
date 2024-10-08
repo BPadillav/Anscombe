@@ -1,4 +1,4 @@
-# Universidad Politécnica Salesiana (UPS)
+# Universidad Politécnica Salesiana
 
 **Carrera**: Computación  
 **Periodo**: 65  
