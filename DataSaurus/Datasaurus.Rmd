@@ -1,0 +1,67 @@
+---
+title: "Datasaurus"
+author: "Lisseth"
+date: "2024-09-23"
+output: html_document
+---
+
+## Cargamos las librerias y packages necesarios
+
+```{r}
+library(tidyverse)
+library (datasauRus)
+library (datasauRus)
+library (dplyr)
+library(ggplot2)
+```
+
+Mostramos un resumen del dataset:
+
+```{r}
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(
+    mean_x = mean(x),
+    mean_y = mean(y),
+    std_dev_x = sd(x),
+    std_dev_y = sd(y),
+    corr_x_y = cor(x, y)
+  )
+```
+
+```{r}
+ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset))+
+  geom_point()+
+  theme_void()+
+  theme(legend.position = "none")+
+  facet_wrap(~dataset, ncol=3)
+```
+
+## Descargar datasets
+
+Es necesario conocer donde se almacenaran los archivos, la funcion write.csv2 permite cargar en formato CSV un fichero
+
+```{r}
+directory <-getwd()
+
+```
+
+Ahora guardamos el data frame de acuerdo al grupo que me fue asignado para R un data frame es una coleccion de columnas
+Considerando 
+
+```{r}
+dfgrupo<-datasaurus_dozen %>%
+  filter(dataset=="x_shape")
+dfgrupo
+```
+
+```{r}
+ggplot(subset(datasaurus_dozen, dataset == "x_shape"), aes(x = x, y = y)) +
+  geom_point(colour = "#F8766D") + 
+  geom_smooth(method = "lm", se = FALSE, colour = "purple") +
+  ggtitle("x shape") +  
+  theme_void() +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5))  
+
+```
