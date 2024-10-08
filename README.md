@@ -1,6 +1,6 @@
 # Universidad Politécnica Salesiana (UPS)
 
-**Carrera**: Ingeniería en Ciencias de la Computación  
+**Carrera**: Computación  
 **Periodo**: 2024-2025  
 **Estudiante**: Lisseth Padilla  
 
