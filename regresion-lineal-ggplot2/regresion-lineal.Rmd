@@ -1,0 +1,30 @@
+---
+title: "Regresión lineal "
+author: "Lisseth Padilla"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Cargamos las librerias y packages necesarios
+
+```{r}
+library(tidyverse)
+library (datasauRus)
+library (datasauRus)
+library (dplyr)
+library(ggplot2)
+```
+
+## Visualización con ggplot2
+
+Se utiliza ggplot2 para visualizar el conjunto de datos “x_shape” del Datasaurus Dozen, graficando los puntos de los datos con geom_point() y ajustando una línea de regresión lineal mediante geom_smooth(method = "lm") en color negro, lo que permite observar la tendencia lineal entre las variables x e y, sin mostrar la banda de error estándar.
+
+```{r}
+ggplot(subset(datasaurus_dozen, dataset == "x_shape"), aes(x = x, y = y)) +
+  geom_point(colour = "#F8766D") + 
+  geom_smooth(method = "lm", se = FALSE, colour = "black") +
+  ggtitle("x shape") +  
+  theme_void() +
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5))  
+```
